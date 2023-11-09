@@ -1,4 +1,4 @@
-import { SettingsTabs } from "../components/SettingsTabs";
+import { SettingsTabs } from '../components/SettingsTabs'
 
 export default function Home() {
   return (
@@ -8,29 +8,34 @@ export default function Home() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex items-center justify-between pb-5 border-b border-zinc-200">
+        <div className="flex items-center justify-between border-b border-zinc-200 pb-5">
           <div className="space-y-1">
             <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
-            <span className="text-sm text-zinc-500">Update yor photo and personal details here.</span>
+            <span className="text-sm text-zinc-500">
+              Update yor photo and personal details here.
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <button
               type="button"
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50">
+              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
+            >
               Cancel
             </button>
             <button
               type="submit"
               form="settings"
-              className="rounded-lg bg-violet-600 border border-zinc-300 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
+              className="rounded-lg border border-zinc-300 bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
             >
               Save
             </button>
           </div>
         </div>
 
-        <form id="settings" className=" mt-6 flex w-full flex-col">asd</form>
+        <form id="settings" className=" mt-6 flex w-full flex-col">
+          asd
+        </form>
       </div>
     </>
-  );
+  )
 }

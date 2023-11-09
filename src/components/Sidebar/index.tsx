@@ -8,12 +8,12 @@ import {
   Search,
   Settings,
   Users,
-} from "lucide-react";
-import { Logo } from "./Logo";
-import { NavItem } from "./NavItem";
-import { UsedSpaceWidget } from "./UsedSpaceWidget";
-import { Profile } from "./Profile";
-import { Input } from "../Input";
+} from 'lucide-react'
+import { Logo } from './Logo'
+import { NavItem } from './NavItem'
+import { UsedSpaceWidget } from './UsedSpaceWidget'
+import { Profile } from './Profile'
+import { Input } from '../Input'
 
 export function Sidebar() {
   return (
@@ -48,5 +48,5 @@ export function Sidebar() {
         <Profile />
       </div>
     </aside>
-  );
+  )
 }

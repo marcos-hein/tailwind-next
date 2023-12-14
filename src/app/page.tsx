@@ -1,18 +1,33 @@
+'use client'
+
 import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 import { Input } from '../components/Input'
 import { SettingsTabs } from '../components/SettingsTabs'
 import * as FileInput from '../components/Form/FileInput'
 import { SelectItem } from '../components/Form/Select/SelectItem'
 import { Select } from '../components/Form/Select'
+import * as Switch from '@radix-ui/react-switch'
 import { Textarea } from '../components/Form/Textarea'
 import { Button } from '../components/Button'
+import { useTheme } from 'next-themes'
 
 export default function Home() {
+  const { theme, setTheme } = useTheme()
+
   return (
     <>
-      <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">
-        Settings
-      </h1>
+      <div className="flex justify-between">
+        <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">
+          Settings
+        </h1>
+
+        <Switch.Root
+          className="relative h-6 w-10 cursor-default rounded-full bg-violet-500 shadow-sm shadow-black outline-none data-[state=checked]:bg-violet-600"
+          onCheckedChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        >
+          <Switch.Thumb className="block h-5 w-5 translate-x-0.5 rounded-full bg-zinc-100 shadow-[0_2px_2px] shadow-black/50 transition-transform duration-100 will-change-transform data-[state=checked]:translate-x-[18px] data-[state=checked]:bg-zinc-200" />
+        </Switch.Root>
+      </div>
 
       <SettingsTabs />
 

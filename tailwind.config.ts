@@ -44,6 +44,7 @@ const config: Config = {
           from: { opacity: '0', transform: 'translateY(-2px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
+        // keyframe utilizado apenas para testes
         // slideUpAndFade: {
         //   from: { opacity: 1 },
         //   to: { opacity: 0 },
@@ -56,6 +57,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
 }
 export default config;

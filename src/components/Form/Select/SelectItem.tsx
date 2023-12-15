@@ -18,7 +18,7 @@ export function SelectItem({ text, ...props }: SelectItemProps) {
       </SelectPrimitive.ItemText>
 
       <SelectPrimitive.ItemIndicator>
-        <Check className="h-4 w-4 text-violet-500 dark:text-violet-300" />
+        <Check className="h-4 w-4 text-blue-500 dark:text-blue-300" />
       </SelectPrimitive.ItemIndicator>
     </SelectPrimitive.Item>
   )

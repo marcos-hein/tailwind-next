@@ -1,6 +1,15 @@
 'use client'
 
-import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
+import {
+  Bold,
+  Italic,
+  Link,
+  List,
+  ListOrdered,
+  Mail,
+  Moon,
+  Sun,
+} from 'lucide-react'
 import { Input } from '../components/Input'
 import { SettingsTabs } from '../components/SettingsTabs'
 import * as FileInput from '../components/Form/FileInput'
@@ -22,10 +31,16 @@ export default function Home() {
         </h1>
 
         <Switch.Root
-          className="relative h-6 w-10 cursor-default rounded-full bg-violet-500 shadow-sm shadow-black outline-none data-[state=checked]:bg-violet-600"
+          className="relative h-6 w-10 cursor-default rounded-full bg-blue-500 outline-none ring-0 hover:cursor-pointer hover:ring-blue-300 data-[state=checked]:bg-blue-600"
           onCheckedChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         >
-          <Switch.Thumb className="block h-5 w-5 translate-x-0.5 rounded-full bg-zinc-100 shadow-[0_2px_2px] shadow-black/50 transition-transform duration-100 will-change-transform data-[state=checked]:translate-x-[18px] data-[state=checked]:bg-zinc-200" />
+          <Switch.Thumb className="flex h-5 w-5 translate-x-0.5 items-center justify-center rounded-full bg-zinc-100 shadow-[0_2px_2px] shadow-black/50 transition-transform duration-100 will-change-transform data-[state=checked]:translate-x-[18px] data-[state=checked]:bg-zinc-200">
+            {theme === 'light' ? (
+              <Sun className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+            ) : (
+              <Moon className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+            )}
+          </Switch.Thumb>
         </Switch.Root>
       </div>
 

@@ -16,7 +16,7 @@ const config: Config = {
       },
 
       colors: {
-        violet: {
+        blue: {
           25: '#fcfaff'
         },
 
